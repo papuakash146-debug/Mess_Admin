@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'http://10.17.70.241:5000/api';
+export const API_BASE_URL = 'http://mess-backend-abzj.onrender.com/api';
 
 export const API_ENDPOINTS = {
   LOGIN: `${API_BASE_URL}/auth/login`,

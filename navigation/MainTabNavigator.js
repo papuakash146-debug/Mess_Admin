@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import MenuScreen from '../screens/MenuScreen';
 import AttendanceScreen from '../screens/AttendanceScreen';
 import ExpenseScreen from '../screens/ExpenseScreen';
+import StudentsScreen from '../screens/StudentsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,9 @@ const MainTabNavigator = () => {
           } else if (route.name === 'Expenses') {
             iconName = 'cash';
           }
+            else if (route.name === 'Students') {
+              iconName = 'human';
+            }
           
           return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
         },
@@ -49,6 +53,11 @@ const MainTabNavigator = () => {
         name="Expenses" 
         component={ExpenseScreen}
         options={{ title: 'Expenses' }}
+      />
+      <Tab.Screen 
+        name="Students" 
+        component={StudentsScreen}
+        options={{ title: 'Students' }}
       />
     </Tab.Navigator>
   );
